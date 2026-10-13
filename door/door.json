@@ -1,0 +1,258 @@
+{
+  "recipe": {
+    "version": 1,
+    "ownerName": "Dana Whitfield",
+    "byline": "Dana Whitfield · Night nurse for twelve years",
+    "title": "Bringing a parent home: is the medicine list clear?",
+    "intro": "Did your parent just come home from the hospital with a new list of pills? Answer a few quick questions to see where things stand and what to ask next.",
+    "minutes": 2,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Do you have the written discharge medicine list?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Yes, I have it",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "No, nothing in writing",
+            "signal": "stop",
+            "why": "Without the list you can't sort anything out, so ask the hospital or the pharmacy for it today."
+          },
+          {
+            "id": "c",
+            "label": "Not sure",
+            "signal": "unknown",
+            "why": "Families are often handed a stack of papers, and it matters which one is the actual medicine list."
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "text": "Do you know which new pills replace the ones your parent already had?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Yes, it was explained and I understand it",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "Some of them, not all",
+            "signal": "caution",
+            "why": "The pills you're unsure about are the ones to bring to the pharmacist first."
+          },
+          {
+            "id": "c",
+            "label": "No idea",
+            "signal": "stop",
+            "why": "This is where families most often go wrong, so call the pharmacist or the discharging team before guessing."
+          }
+        ]
+      },
+      {
+        "id": "q3",
+        "text": "Are there old bottles at home that might overlap with the new list?",
+        "options": [
+          {
+            "id": "a",
+            "label": "No, or I've already checked",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "Yes, and I haven't checked them yet",
+            "signal": "caution",
+            "why": "Old bottles sitting next to new ones are how the same medicine can end up taken twice."
+          },
+          {
+            "id": "c",
+            "label": "Not sure",
+            "signal": "unknown",
+            "why": "You can't tell what is new and what has been replaced until everything at home is in one place."
+          }
+        ]
+      },
+      {
+        "id": "q4",
+        "text": "Has a pharmacist gone through the full list with you?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Yes",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "Not yet",
+            "signal": "caution",
+            "why": "A pharmacist can check every prescription together and spot overlaps, so it's worth asking for a review."
+          }
+        ]
+      },
+      {
+        "id": "q5",
+        "text": "Do you know who to call with a medicine question at night or on a weekend?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Yes",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "No",
+            "signal": "caution",
+            "why": "Questions about the list often come up in the middle of the night, so find the number before you need it."
+          },
+          {
+            "id": "c",
+            "label": "Not sure",
+            "signal": "unknown",
+            "why": "If you don't know who answers after hours, you'll be left guessing when a question comes up."
+          }
+        ]
+      },
+      {
+        "id": "q6",
+        "text": "Since coming home, has your parent had new symptoms, such as being very drowsy, confused or falling?",
+        "options": [
+          {
+            "id": "a",
+            "label": "No",
+            "signal": "clear",
+            "why": ""
+          },
+          {
+            "id": "b",
+            "label": "Yes",
+            "signal": "stop",
+            "why": "New symptoms need a doctor or pharmacist now, not a checklist; in an emergency, call emergency services."
+          }
+        ]
+      }
+    ],
+    "unknownThreshold": 2,
+    "results": {
+      "stop": {
+        "title": "Stop. Get help today.",
+        "body": "At least one answer means you need help now, not later. Call the pharmacist, the prescriber or the hospital team that discharged your parent, and in an emergency call emergency services. Don't stop or change any medicine on your own."
+      },
+      "unclear": {
+        "title": "You can't judge this yet.",
+        "body": "There are a few things you don't know yet, and they matter. Find the written list, gather every bottle in one place and take your questions to the pharmacist."
+      },
+      "clear": {
+        "title": "Nothing alarming so far.",
+        "body": "From your answers, the list looks under control for now. Keep the list and the bottles together, and check again whenever a medicine changes."
+      }
+    },
+    "always": [
+      "Keep the discharge list and every medicine bottle together in one place.",
+      "Write down your questions as they come up, and bring them to the pharmacist.",
+      "Never stop or change a medicine without asking the prescriber or pharmacist first."
+    ],
+    "disclaimer": "This is general guidance from one nurse's experience to help you get organised. It is not medical advice or a review of your parent's medicines, so always check with a pharmacist or doctor.",
+    "method": {
+      "name": "The Discharge List Walkthrough",
+      "oneLine": "A plain way for families to line up the new discharge list against the medicines already at home, so they know what is unclear and who to ask.",
+      "steps": [
+        {
+          "name": "Get the list in hand",
+          "text": "Make sure you have the written discharge medicine list before you try to sort anything out."
+        },
+        {
+          "name": "Line up old and new",
+          "text": "Put the new list next to the bottles already at home and see which ones look like they overlap."
+        },
+        {
+          "name": "Mark what is unclear",
+          "text": "Circle every pill where you can't tell whether it replaces an old one, adds to it or stays the same."
+        },
+        {
+          "name": "Take it to the pharmacist",
+          "text": "Bring the marked list and the bottles to the pharmacist or the prescriber and ask your questions there."
+        }
+      ],
+      "limits": "It helps families get organised and ask better questions. It never says which medicine to take, stop or change, and it does not replace a pharmacist's review or a doctor's instructions."
+    },
+    "offer": {
+      "name": "Home Medicines Made Simple",
+      "get": "A short course from a night nurse that shows you how to line up the discharge list against what is at home, mark what is unclear, and take the right questions to the pharmacist.",
+      "forWho": "Adult children looking after a parent at home after a hospital stay.",
+      "notIncluded": [
+        "Medical advice on which medicine your parent should take, stop or change.",
+        "A review of your parent's own prescriptions. That is the pharmacist's or the doctor's job.",
+        "A replacement for a pharmacist's medication review."
+      ]
+    },
+    "ask": {
+      "heading": "Ask Dana for help",
+      "text": "Dana Whitfield offers Home Medicines Made Simple, a short course for $99 that shows families how to sort out a parent's medicines at home after a hospital stay. Send Dana a request and she will get back to you.",
+      "button": "Ask Dana about the course"
+    },
+    "plan": {
+      "days": 7,
+      "title": "Your first 7 days at home"
+    },
+    "welcome": {
+      "heading": "Find out where your parent's medicine list stands",
+      "receive": [
+        {
+          "label": "Your result",
+          "text": "A plain answer on where the medicine list stands."
+        },
+        {
+          "label": "What needs attention",
+          "text": "Every answer that needs a closer look, and why it matters."
+        },
+        {
+          "label": "Your first step",
+          "text": "One thing to do today."
+        },
+        {
+          "label": "Your 7-day plan",
+          "text": "Day by day, following Dana's Discharge List Walkthrough."
+        },
+        {
+          "label": "Dana's advisor",
+          "text": "Ask about your result and your plan whenever a question comes up."
+        }
+      ]
+    },
+    "advisor": {
+      "name": "Dana's advisor",
+      "quickReplies": [
+        "What should I do first?",
+        "What do I ask the pharmacist?",
+        "Which paper is the medicine list?"
+      ]
+    },
+    "source": {
+      "packageId": "pkg-standin-assessment-dana",
+      "builtBy": "stand-in-conversion",
+      "note": "Every part comes from the saved package (written by stand-in: her October 11 model lines plus hand-written assessment lines (no AI)), copied word for word."
+    }
+  },
+  "settings": {
+    "template": "harbor",
+    "brand": "#2f80ed",
+    "displayName": "Dana Whitfield",
+    "logo": null,
+    "contact": {
+      "url": null,
+      "email": "dana.whitfield@example.com"
+    },
+    "testLabel": "Test version · made for testing, not a real customer's door",
+    "preview": false,
+    "productImage": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "dana-whitfield-front-door",
+  "private": true,
+  "description": "Bringing a parent home: is the medicine list clear? by Dana Whitfield: a Front Door assessment.",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.133.0"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "ANTHROPIC_API_KEY": {
+        "description": "Your Anthropic API key: it writes each visitor's plan and runs the advisor. Get it at [console.anthropic.com](https://console.anthropic.com) under **API Keys**, and set a monthly spending limit there under **Settings > Limits**."
+      },
+      "DAILY_LIMIT_USD": {
+        "description": "The most the AI may cost in one day, in US dollars. When it's reached, visitors still get their result; the plan and the advisor come back the next day."
+      }
+    }
+  }
+}

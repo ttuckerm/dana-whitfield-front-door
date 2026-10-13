@@ -1,0 +1,20 @@
+// Dana Whitfield's Front Door. Cloudflare reads this file when it
+// deploys. The name below must match the Worker's name in Cloudflare.
+{
+  "name": "dana-whitfield-front-door",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-09-15",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "durable_objects": { "bindings": [{ "name": "STORE", "class_name": "DoorStore" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DoorStore"] }],
+  // The most the AI may cost in one day, in US dollars. Change it in
+  // Cloudflare (Settings > Variables & Secrets); keep_vars keeps your change.
+  "vars": { "DAILY_LIMIT_USD": "5" },
+  "keep_vars": true,
+  "observability": { "enabled": true }
+}
